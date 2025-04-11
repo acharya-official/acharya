@@ -469,144 +469,172 @@
             <div class="contact-us-content" style="padding: 10px !important">
               <form id="contact-form">
                 <div class="row">
-                  <h3 class="form-section-thnx"> Personal Details</h3>
-                  <div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <fieldset>
-                          <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                        </fieldset>
+
+                  <h2 class="accordion-header thnx-form-section" id="formSectionOne">
+                    <button class="accordion-button collapsed" id="formSectionOneBtn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#formAreaOne" aria-expanded="false"
+                      aria-controls="formAreaOne" onclick="collapseAcademicBlock()">
+                      Personal Details
+                    </button>
+                  </h2>
+                  <div id="formAreaOne" class="accordion-collapse collapse" aria-labelledby="formSectionOne"
+                    data-bs-parent="#accordionExample">
+
+
+
+                    <!-- <h3 class="form-section-thnx"> Personal Details</h3> -->
+                    <div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" name="contact_no" id="contact_no" pattern="[789][0-9]{9}"
+                              placeholder="Contact No" required=" ">
+                          </fieldset>
+                        </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-lg-12">
                         <fieldset>
-                          <input type="text" name="contact_no" id="contact_no" pattern="[789][0-9]{9}"
-                            placeholder="Contact No" required=" ">
+                          <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-mail"
+                            required="">
                         </fieldset>
                       </div>
                     </div>
                     <div class="col-lg-12">
+                      <h4 class="form-subheader">Preferred Mode of Study:</h4>
                       <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-mail"
-                          required="">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input radio-thnx" type="radio" name="mode" id="online-mode"
+                            value="Online" onchange="modeChanged('online')">
+                          <label class="form-check-label label-radio-thnx" for="online-mode">Online</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input radio-thnx" type="radio" name="mode" id="offline-mode"
+                            value="Offline / Home Tution" onchange="modeChanged('offline')" checked>
+                          <label class="form-check-label label-radio-thnx" for="offline-mode"> Offline / Home
+                            Tution</label>
+                        </div>
                       </fieldset>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h4 class="form-subheader">Preferred Mode of Study:</h4>
-                    <fieldset>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input radio-thnx" type="radio" name="mode" id="online-mode"
-                          value="Online" onchange="modeChanged('online')">
-                        <label class="form-check-label label-radio-thnx" for="online-mode">Online</label>
+                    <div id="input-address-details">
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <input type="text" name="address" id="address" placeholder="Full Address" required="">
+                        </fieldset>
                       </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input radio-thnx" type="radio" name="mode" id="offline-mode"
-                          value="Offline / Home Tution" onchange="modeChanged('offline')" checked>
-                        <label class="form-check-label label-radio-thnx" for="offline-mode"> Offline / Home
-                          Tution</label>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" name="city" id="city" placeholder="City" required="">
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" name="state" id="state" placeholder="State" required="">
+                          </fieldset>
+                        </div>
                       </div>
-                    </fieldset>
+                    </div>
+
                   </div>
-                  <div id="input-address-details">
+
+
+
+                  <h2 class="accordion-header thnx-form-section" id="formSectionTwo">
+                    <button class="accordion-button collapsed" id="formSectionTwoBtn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#formAreaTwo" aria-expanded="false"
+                      aria-controls="formAreaTwo" onclick="collapsePersonalBlock()">
+                      Academic Details
+                    </button>
+                  </h2>
+                  <div id="formAreaTwo" class="accordion-collapse collapse" aria-labelledby="formSectionTwo"
+                    data-bs-parent="#accordionExample">
+
+                    <!-- <h3 class="form-section-thnx" style="
+                    border-top: 2px solid #36a0cf;
+                    padding-top: 2rem;
+                    "> Academic Details</h3> -->
+                    <div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <select id="class" class="form-select dropdown-style" required>
+                              <option selected disabled>Choose Your Class</option>
+                              <option value="III">III</option>
+                              <option value="IV">IV</option>
+                              <option value="V">V</option>
+                              <option value="VI">VI</option>
+                              <option value="VII">VII</option>
+                              <option value="VIII">VIII</option>
+                              <option value="IX">IX</option>
+                              <option value="X">X</option>
+                            </select>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-md-6">
+                          <fieldset>
+                            <select id="board" class="form-select dropdown-style" required>
+                              <option selected disabled>Board</option>
+                              <option value="ICSE/ISC">ICSE/ISC</option>
+                              <option value="CBSE">CBSE</option>
+                              <option value="State Board">State Board</option>
+                            </select>
+                          </fieldset>
+                        </div>
+                      </div>
+
+
+                      <div class="col-lg-12">
+                        <h4 class="form-subheader">Choose Required Subjects:</h4>
+                        <fieldset>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-eng" value="English">
+                            <label class="form-check-label label-check-thnx" for="sub-eng">English</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-comp" value="Computer">
+                            <label class="form-check-label label-check-thnx" for="sub-comp">Computer</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-maths"
+                              value="Mathematics">
+                            <label class="form-check-label label-check-thnx" for="sub-maths">Mathematics</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-phy" value="Physics">
+                            <label class="form-check-label label-check-thnx" for="sub-phy">Physics</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-chem" value="Chemistry">
+                            <label class="form-check-label label-check-thnx" for="sub-chem">Chemistry</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-bio" value="Biology">
+                            <label class="form-check-label label-check-thnx" for="sub-bio">Biology</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-econ" value="Economics">
+                            <label class="form-check-label label-check-thnx" for="sub-econ">Economics</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-elit" value="Eng. Lit.">
+                            <label class="form-check-label label-check-thnx" for="sub-elit">Eng. Lit.</label>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+
                     <div class="col-lg-12">
                       <fieldset>
-                        <input type="text" name="address" id="address" placeholder="Full Address" required="">
+                        <textarea name="message" id="message"
+                          placeholder="Why do you need an Acharya, Write your goal."></textarea>
                       </fieldset>
                     </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <fieldset>
-                          <input type="text" name="city" id="city" placeholder="City" required="">
-                        </fieldset>
-                      </div>
-                      <div class="col-md-6">
-                        <fieldset>
-                          <input type="text" name="state" id="state" placeholder="State" required="">
-                        </fieldset>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <h3 class="form-section-thnx" style="
-            border-top: 2px solid #36a0cf;
-            padding-top: 2rem;
-          "> Academic Details</h3>
-                  <div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <fieldset>
-                          <select id="class" class="form-select dropdown-style" required>
-                            <option selected disabled>Choose Your Class</option>
-                            <option value="III">III</option>
-                            <option value="IV">IV</option>
-                            <option value="V">V</option>
-                            <option value="VI">VI</option>
-                            <option value="VII">VII</option>
-                            <option value="VIII">VIII</option>
-                            <option value="IX">IX</option>
-                            <option value="X">X</option>
-                          </select>
-                        </fieldset>
-                      </div>
-
-                      <div class="col-md-6">
-                        <fieldset>
-                          <select id="board" class="form-select dropdown-style" required>
-                            <option selected disabled>Board</option>
-                            <option value="ICSE/ISC">ICSE/ISC</option>
-                            <option value="CBSE">CBSE</option>
-                            <option value="State Board">State Board</option>
-                          </select>
-                        </fieldset>
-                      </div>
-                    </div>
-
-
-                    <div class="col-lg-12">
-                      <h4 class="form-subheader">Choose Required Subjects:</h4>
-                      <fieldset>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-eng" value="English">
-                          <label class="form-check-label label-check-thnx" for="sub-eng">English</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-comp" value="Computer">
-                          <label class="form-check-label label-check-thnx" for="sub-comp">Computer</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-maths" value="Mathematics">
-                          <label class="form-check-label label-check-thnx" for="sub-maths">Mathematics</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-phy" value="Physics">
-                          <label class="form-check-label label-check-thnx" for="sub-phy">Physics</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-chem" value="Chemistry">
-                          <label class="form-check-label label-check-thnx" for="sub-chem">Chemistry</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-bio" value="Biology">
-                          <label class="form-check-label label-check-thnx" for="sub-bio">Biology</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-econ" value="Economics">
-                          <label class="form-check-label label-check-thnx" for="sub-econ">Economics</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input check-thnx" type="checkbox" id="sub-elit" value="Eng. Lit.">
-                          <label class="form-check-label label-check-thnx" for="sub-elit">Eng. Lit.</label>
-                        </div>
-                      </fieldset>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" id="message"
-                        placeholder="Why do you need an Acharya, Write your goal."></textarea>
-                    </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>

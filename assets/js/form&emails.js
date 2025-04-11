@@ -7,6 +7,18 @@ function modeChanged(newMode) {
   }
 }
 
+function collapseAcademicBlock() {
+  document.getElementById("formAreaTwo").classList.remove("show");
+  document.getElementById("formSectionTwoBtn").classList.add("collapsed");
+  document.getElementById("formSectionTwoBtn").setAttribute("aria-expanded", "false");
+}
+
+function collapsePersonalBlock() {
+  document.getElementById("formAreaOne").classList.remove("show");
+  document.getElementById("formSectionOneBtn").classList.add("collapsed");
+  document.getElementById("formSectionOneBtn").setAttribute("aria-expanded", "false");
+}
+
 function invokeEmail() {
 
   var chosenSubjects = getSubjects();
