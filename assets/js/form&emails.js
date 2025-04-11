@@ -26,10 +26,24 @@ function invokeEmail() {
     message: document.getElementById("message").value
   };
 
+  const params = new URLSearchParams(templateParams);
+
   emailjs.send("become-aacharya", "template_1tkl9ue", templateParams).then(
     (response) => {
-      console.log('SUCCESS!', response.status, response.text);
-      alert("We have recorded your response successfully!");
+      console.log('Email sent successfully!', response.status, response.text);
+
+      fetch(`https://script.google.com/macros/s/AKfycbxs8DF0pwDS14IiPfQm7jMXYSYVF1zpaZrxLNiPr5n0dnjYo-Q8GdQJlx3O33Vg5CFI/exec?${params}`, {
+        method: "GET",
+        mode: "no-cors"
+      })
+        .then(response => {
+          console.log('Record added successfully!', response.status, response.text);
+          alert("Your response has been received successfully. Our team will contact you soon to discuss your ward's learning needs.");
+        })
+        .catch(err => {
+          console.error("Error:", err);
+          alert("An error occurred while submitting the form.");
+        });
     },
     (error) => {
       console.log('FAILED...', error);
