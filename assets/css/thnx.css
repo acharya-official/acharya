@@ -34,6 +34,16 @@
     color: #ebebeb;
 }
 
+.form-subheader-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.7rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    color: #ebebeb;
+    text-align: center;
+}
+
 .form-section-thnx {
     color: #ebebeb;
     text-align: center;
@@ -63,8 +73,7 @@
     margin-bottom: 2rem;
 }
 
-.radio-flexbox
-{
+.radio-flexbox {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -72,16 +81,35 @@
     padding: 0;
 }
 
-.switch-thnx
-{
-    background-color:  #5fbee8 !important;
-    color:  #fff !important;
+.switch-thnx {
+    background-color: transparent !important;
+    color: #bababa !important;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
+    border-bottom: 0.2rem solid transparent !important;
+    border-radius: 0.4rem !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
 }
 
-.active-radio
-{
-    background-color: #fff !important;
-    color:  #298fbc !important;
+.active-radio {
+    border-bottom: 0.2rem solid #52b6e3 !important;
+    color: #fff !important;
+}
+
+.submit-button {
+    display: flex;
+    margin: auto;
+}
+
+#form-submit {
+    background-color: #298fbc !important;
+    color: #c5e1ed !important;
+    border: 2px solid #6fbfe3 !important;
+}
+
+#form-submit:hover {
+    background-color: #38a5d6 !important;
+    color: #fff !important;
+    border: 2px solid transparent !important;
 }
