@@ -1,3 +1,5 @@
+let scope = 'Tuition';
+
 function modeChanged(newMode) {
   if (newMode == 'online') {
     document.getElementById('input-address-details').style.display = 'none';
@@ -19,6 +21,26 @@ function collapsePersonalBlock() {
   document.getElementById("formSectionOneBtn").setAttribute("aria-expanded", "false");
 }
 
+
+function changeScope(newScope) {
+  if (newScope == 'mentorship') {
+    document.getElementById("curriculum-switch").classList.remove("active-radio");
+    document.getElementById("mentorship-switch").classList.add("active-radio");
+    document.getElementById("message-mentorship-div").style.display = 'block';
+    document.getElementById("message-div").style.display = 'none';
+    document.getElementById("subjects-div").style.display = 'none';
+    scope = 'Mentorship & Counselling';
+  }
+  else if (newScope == 'curriculum') {
+    document.getElementById("mentorship-switch").classList.remove("active-radio");
+    document.getElementById("curriculum-switch").classList.add("active-radio");
+    document.getElementById("message-mentorship-div").style.display = 'none';
+    document.getElementById("message-div").style.display = 'block';
+    document.getElementById("subjects-div").style.display = 'block';
+    scope = 'Tuition';
+  }
+}
+
 function invokeEmail() {
 
   var chosenSubjects = getSubjects();
@@ -28,15 +50,24 @@ function invokeEmail() {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     contact_no: document.getElementById("contact_no").value,
+    opted_for: scope,
     mode: mode,
     address: document.getElementById("address").value,
     city: document.getElementById("city").value,
     state: document.getElementById("state").value,
     class: document.getElementById("class").value,
     board: document.getElementById("board").value,
-    subjects: chosenSubjects,
     message: document.getElementById("message").value
   };
+
+  if (scope == 'Tuition') {
+    templateParams["message"] = document.getElementById("message").value;
+    templateParams["subjects"] = chosenSubjects;
+  }
+  else {
+    templateParams["message"] = document.getElementById("message-mentorship").value;
+    templateParams["subjects"] = "NA";
+  }
 
   const params = new URLSearchParams(templateParams);
 
@@ -44,7 +75,7 @@ function invokeEmail() {
     (response) => {
       console.log('Email sent successfully!', response.status, response.text);
 
-      fetch(`https://script.google.com/macros/s/AKfycbxs8DF0pwDS14IiPfQm7jMXYSYVF1zpaZrxLNiPr5n0dnjYo-Q8GdQJlx3O33Vg5CFI/exec?${params}`, {
+      fetch(`https://script.google.com/macros/s/AKfycbxPBTdJ6610PCauHkNmAeK6ohAA9spPAVII5U3p2YhB0WedOmM0i_46WKLFfXuyz-F4/exec?${params}`, {
         method: "GET",
         mode: "no-cors"
       })

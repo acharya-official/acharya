@@ -62,3 +62,24 @@
 .thnx-form-section {
     margin-bottom: 2rem;
 }
+
+.radio-flexbox
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.switch-thnx
+{
+    background-color:  #5fbee8 !important;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.active-radio
+{
+    background-color: #fff !important;
+}

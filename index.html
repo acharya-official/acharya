@@ -45,7 +45,7 @@
   <script type="text/javascript" src="assets/js/form&emails.js">
   </script>
   <!--Email JS Integration Scripts end here-->
-
+  
 </head>
 
 <body>
@@ -470,6 +470,13 @@
               <form id="contact-form">
                 <div class="row">
 
+                  <div class="radio-flexbox">
+                    <button id="curriculum-switch" class="switch-thnx active-radio"
+                    onclick="changeScope('curriculum')">Tuition</button>
+                    <button id="mentorship-switch" class="switch-thnx" 
+                    onclick="changeScope('mentorship')">Mentorship & Counselling</button>
+                  </div>
+
                   <h2 class="accordion-header thnx-form-section" id="formSectionOne">
                     <button class="accordion-button collapsed" id="formSectionOneBtn" type="button"
                       data-bs-toggle="collapse" data-bs-target="#formAreaOne" aria-expanded="false"
@@ -481,8 +488,6 @@
                     data-bs-parent="#accordionExample">
 
 
-
-                    <!-- <h3 class="form-section-thnx"> Personal Details</h3> -->
                     <div>
                       <div class="row">
                         <div class="col-md-6">
@@ -589,7 +594,7 @@
                       </div>
 
 
-                      <div class="col-lg-12">
+                      <div class="col-lg-12" id="subjects-div">
                         <h4 class="form-subheader">Choose Required Subjects:</h4>
                         <fieldset>
                           <div class="form-check form-check-inline">
@@ -629,12 +634,20 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-12">
+                    <div class="col-lg-12" id="message-div">
                       <fieldset>
                         <textarea name="message" id="message"
                           placeholder="Why do you need an Acharya, Write your goal."></textarea>
                       </fieldset>
                     </div>
+
+                    <div class="col-lg-12" id="message-mentorship-div" style="display: none;">
+                      <fieldset>
+                        <textarea name="message" id="message-mentorship"
+                          placeholder="Why Are You Looking For Mentorship (Problem and Goal)?"></textarea>
+                      </fieldset>
+                    </div>
+
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
