@@ -22,6 +22,7 @@
 
 
   <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/thnx.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
   <link rel="stylesheet" href="assets/css/owl.css">
@@ -30,12 +31,27 @@
   <!--  Fevicon -->
 
   <link rel="icon" href="assets/images/fevicon.ico" type="image/x-icon">
+
+  <!--Email JS Integration Scripts start here-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "PINvWY4d7m1M454Gh",
+      });
+    })();
+  </script>
+  <script type="text/javascript" src="assets/js/form&emails.js">
+  </script>
+  <!--Email JS Integration Scripts end here-->
+
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM8XQSB2"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM8XQSB2" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ***** Preloader Start ***** -->
@@ -69,7 +85,7 @@
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
               <!-- <li class="scroll-to-section"><a href="#courses">Upcoming Events</a></li> -->
-              <li ><a href="tutor.html">Be An Acharya</a></li> 
+              <li><a href="tutor.html">Be An Acharya</a></li>
               <li class="scroll-to-section"><a href="#events">Programs</a></li>
               <li class="scroll-to-section"><a href="#contact">Enquire Now!</a></li>
             </ul>
@@ -231,119 +247,11 @@
               and <strong>faster learning</strong>. Our <strong>progress guarantee</strong> and
               <strong>parent-friendly dashboard</strong> set a new standard in premium education.
             </p>
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--           Courses    -->
-<!--
-  <section class="section courses" id="courses">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h6>Available Batches</h6>
-            <h2>Available Batches</h2>
-          </div>
-        </div>
-      </div>
-      <ul class="event_filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".online_class">Online Classes</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".home_tution">Home Tution</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".counselling_mentorship"> Career Counselling & Mentorship</a>
-        </li>
-      </ul>
-      <div class="row event_box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 online_class">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/event-01.jpg" alt=""></a>
-              <span class="category">Online Classes</span>
-              <span class="price">
-               <h6><em>$</em>160</h6> 
-              </span>
-            </div>
-            <div class="down-content">
-              <span class="author">Pooja Saxena</span>
-              <h4>English VI-X ICSE Board </h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  online_class">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/event-01.jpg" alt=""></a>
-              <span class="category">Online Classes</span>
-              <span class="price">
-                <h6><em>$</em>340</h6>
-              </span>
-            </div>
-            <div class="down-content">
-              <span class="author">Pooja Saxena</span>
-              <h4>Spoken English</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 home_tution">
-          <div class="events_item">
-            <div class="thumb">
-              <a href=""><img src="assets/images/event-02.jpg" alt=""></a>
-              <span class="category">Home Tution</span>
-              <span class="price">
-                <h6><em>$</em>640</h6> 
-              </span>
-            </div>
-            <div class="down-content">
-              <span class="author">Shubham Singh</span>
-              <h4>Maths</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 counselling_mentorship">
-          <div class="events_item">
-            <div class="thumb">
-              <a href=""><img src="assets/images/event-03.jpg" alt=""></a>
-              <span class="category">Mentorship</span>
-              <span class="price">
-                <h6><em>$</em>450</h6> 
-              </span>
-            </div>
-            <div class="down-content">
-              <span class="author">Preeti Patel</span>
-              <h4>UPSC </h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 counselling_mentorship online_class home_tution">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#contact"><img src="assets/images/Confused.jpg" alt=""></a>
-              <span class="category">Enquiry</span>
-              <span class="price">
-                <h6><em>$</em>450</h6> 
-              </span>
-            </div>
-            <div class="down-content">
-              <span class="author">Didn't Find What You Are Looking for?</span>
-              <h4>Enquire Now </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>  -->
 
   <div class="section fun-facts">
     <div class="container">
@@ -382,70 +290,6 @@
     </div>
   </div>
 
-  <!-- Team -->
-  <!--<div class="team section" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-01.jpg" alt="">
-              <span class="category">UX Teacher</span>
-              <h4>Sophia Rose</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-02.jpg" alt="">
-              <span class="category">Graphic Teacher</span>
-              <h4>Cindy Walker</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-03.jpg" alt="">
-              <span class="category">Full Stack Master</span>
-              <h4>David Hutson</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-04.jpg" alt="">
-              <span class="category">Digital Animator</span>
-              <h4>Stella Blair</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
- -->
   <div class="section testimonials" id="testimonials">
     <div class="container">
       <div class="row">
@@ -620,25 +464,218 @@
         </div>
         <div class="col-lg-6">
           <div class="contact-us-content">
-            
-            <script type="text/javascript" src="https://form.jotform.com/jsform/250944129861462"></script>
-  
+
+
+            <div class="contact-us-content" style="padding: 10px !important">
+              <form id="contact-form">
+                <div class="row">
+
+                  <h4 class="form-subheader-title">I'm looking for:</h4>
+                  <div class="radio-flexbox">
+                    <button id="curriculum-switch" class="switch-thnx active-radio"
+                      onclick="changeScope('curriculum')">Tuition</button>
+                    <button id="mentorship-switch" class="switch-thnx" onclick="changeScope('mentorship')">Mentorship &
+                      Counselling</button>
+                  </div>
+
+                  <h2 class="accordion-header thnx-form-section" id="formSectionOne">
+                    <button class="accordion-button collapsed" id="formSectionOneBtn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#formAreaOne" aria-expanded="false"
+                      aria-controls="formAreaOne" onclick="collapseAcademicBlock()">
+                      Personal Details
+                    </button>
+                  </h2>
+                  <div id="formAreaOne" class="accordion-collapse collapse" aria-labelledby="formSectionOne"
+                    data-bs-parent="#accordionExample">
+
+
+                    <div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" name="contact_no" id="contact_no" pattern="[789][0-9]{9}"
+                              placeholder="Contact No" required=" ">
+                          </fieldset>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-mail"
+                            required="">
+                        </fieldset>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h4 class="form-subheader">Preferred Mode of Study:</h4>
+                      <fieldset>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input radio-thnx" type="radio" name="mode" id="online-mode"
+                            value="Online" onchange="modeChanged('online')">
+                          <label class="form-check-label label-radio-thnx" for="online-mode">Online</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input radio-thnx" type="radio" name="mode" id="offline-mode"
+                            value="Offline / Home Tution" onchange="modeChanged('offline')" checked>
+                          <label class="form-check-label label-radio-thnx" for="offline-mode"> Offline / Home
+                            Tution</label>
+                        </div>
+                      </fieldset>
+                    </div>
+                    <div id="input-address-details">
+                      <div class="col-lg-12">
+                        <fieldset>
+                          <input type="text" name="address" id="address" placeholder="Full Address" required="">
+                        </fieldset>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" name="city" id="city" placeholder="City" required="">
+                          </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" name="state" id="state" placeholder="State" required="">
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+
+
+                  <h2 class="accordion-header thnx-form-section" id="formSectionTwo">
+                    <button class="accordion-button collapsed" id="formSectionTwoBtn" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#formAreaTwo" aria-expanded="false"
+                      aria-controls="formAreaTwo" onclick="collapsePersonalBlock()">
+                      Academic Details
+                    </button>
+                  </h2>
+                  <div id="formAreaTwo" class="accordion-collapse collapse" aria-labelledby="formSectionTwo"
+                    data-bs-parent="#accordionExample">
+
+                    <!-- <h3 class="form-section-thnx" style="
+                    border-top: 2px solid #36a0cf;
+                    padding-top: 2rem;
+                    "> Academic Details</h3> -->
+                    <div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <fieldset>
+                            <select id="class" class="form-select dropdown-style" required>
+                              <option selected disabled>Choose Your Class</option>
+                              <option value="III">III</option>
+                              <option value="IV">IV</option>
+                              <option value="V">V</option>
+                              <option value="VI">VI</option>
+                              <option value="VII">VII</option>
+                              <option value="VIII">VIII</option>
+                              <option value="IX">IX</option>
+                              <option value="X">X</option>
+                            </select>
+                          </fieldset>
+                        </div>
+
+                        <div class="col-md-6">
+                          <fieldset>
+                            <select id="board" class="form-select dropdown-style" required>
+                              <option selected disabled>Board</option>
+                              <option value="ICSE/ISC">ICSE/ISC</option>
+                              <option value="CBSE">CBSE</option>
+                              <option value="State Board">State Board</option>
+                            </select>
+                          </fieldset>
+                        </div>
+                      </div>
+
+
+                      <div class="col-lg-12" id="subjects-div">
+                        <h4 class="form-subheader">Choose Required Subjects:</h4>
+                        <fieldset>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-eng" value="English">
+                            <label class="form-check-label label-check-thnx" for="sub-eng">English</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-comp" value="Computer">
+                            <label class="form-check-label label-check-thnx" for="sub-comp">Computer</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-maths"
+                              value="Mathematics">
+                            <label class="form-check-label label-check-thnx" for="sub-maths">Mathematics</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-phy" value="Physics">
+                            <label class="form-check-label label-check-thnx" for="sub-phy">Physics</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-chem" value="Chemistry">
+                            <label class="form-check-label label-check-thnx" for="sub-chem">Chemistry</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-bio" value="Biology">
+                            <label class="form-check-label label-check-thnx" for="sub-bio">Biology</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-econ" value="Economics">
+                            <label class="form-check-label label-check-thnx" for="sub-econ">Economics</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input check-thnx" type="checkbox" id="sub-elit" value="Eng. Lit.">
+                            <label class="form-check-label label-check-thnx" for="sub-elit">Eng. Lit.</label>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12" id="message-div">
+                      <fieldset>
+                        <textarea name="message" id="message"
+                          placeholder="Why do you need an Acharya, Write your goal."></textarea>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12" id="message-mentorship-div" style="display: none;">
+                      <fieldset>
+                        <textarea name="message" id="message-mentorship"
+                          placeholder="Why Are You Looking For Mentorship (Problem and Goal)?"></textarea>
+                      </fieldset>
+                    </div>
+
+                  </div>
+                  <div class="col-lg-12 submit-button">
+                    <fieldset class="submit-button">
+                      <button type="button" id="form-submit" class="orange-button" onclick="invokeEmail()">Find Your
+                        Acharyaa Now</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <footer>
     <div class="container">
       <div class="col-lg-12" style="padding-top: 50px; padding-bottom: 50px;">
-        <p>Copyright © 2025 Acharya. &nbsp; 
-          All rights reserved. 
+        <p>Copyright © 2025 Acharya. &nbsp;
+          All rights reserved.
         </p>
         <p>
           <a href="assets/docs/PRIVACY POLICY - ACHARYA.pdf" target="_blank">Privacy</a> &bull;
           <a href="assets/docs/TERMS OF USE - ACHARYA.pdf" target="_blank">Terms</a> &nbsp; &nbsp; &nbsp;
-          Developed By: <a href="https://www.thehypernex.com" rel="" target="_blank">The HyperNex</a> </p>
+          Developed By: <a href="https://www.thehypernex.com" rel="" target="_blank">The HyperNex</a>
+        </p>
       </div>
     </div>
   </footer>

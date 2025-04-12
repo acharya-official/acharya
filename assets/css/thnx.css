@@ -1,0 +1,115 @@
+.radio-thnx {
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    padding: 0 !important;
+}
+
+.label-radio-thnx {
+    font-weight: 300 !important;
+    font-size: 14px !important;
+    color: #fff !important;
+    margin-left: 0.5rem !important;
+}
+
+.check-thnx {
+    height: 1.2rem !important;
+    width: 1.4rem !important;
+    border-radius: 0.3rem !important;
+    padding: 0 !important;
+}
+
+.label-check-thnx {
+    font-weight: 300 !important;
+    font-size: 14px !important;
+    color: #fff !important;
+    margin-left: 0.5rem !important;
+}
+
+.form-subheader {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 1.7rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    color: #ebebeb;
+}
+
+.form-subheader-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.7rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    color: #ebebeb;
+    text-align: center;
+}
+
+.form-section-thnx {
+    color: #ebebeb;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+
+.dropdown-style {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba(249, 235, 255, 0.15);
+    border: none;
+    outline: none;
+    font-weight: 300;
+    padding: 0px 20px;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
+}
+
+.thnx-form-section {
+    margin-bottom: 2rem;
+}
+
+.radio-flexbox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.switch-thnx {
+    background-color: transparent !important;
+    color: #bababa !important;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    border-bottom: 0.2rem solid transparent !important;
+    border-radius: 0.4rem !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+
+.active-radio {
+    border-bottom: 0.2rem solid #52b6e3 !important;
+    color: #fff !important;
+}
+
+.submit-button {
+    display: flex;
+    margin: auto;
+}
+
+#form-submit {
+    background-color: #298fbc !important;
+    color: #c5e1ed !important;
+    border: 2px solid #6fbfe3 !important;
+}
+
+#form-submit:hover {
+    background-color: #38a5d6 !important;
+    color: #fff !important;
+    border: 2px solid transparent !important;
+}
