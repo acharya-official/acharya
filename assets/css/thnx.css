@@ -75,6 +75,7 @@
 .switch-thnx
 {
     background-color:  #5fbee8 !important;
+    color:  #fff !important;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 }
@@ -82,4 +83,5 @@
 .active-radio
 {
     background-color: #fff !important;
+    color:  #298fbc !important;
 }

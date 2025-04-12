@@ -71,7 +71,7 @@ function invokeEmail() {
 
   const params = new URLSearchParams(templateParams);
 
-  emailjs.send("become-aacharya", "template_1tkl9ue", templateParams).then(
+  emailjs.send("acharya_auto_mails", "template_cubnmwe", templateParams).then(
     (response) => {
       console.log('Email sent successfully!', response.status, response.text);
 
