@@ -121,3 +121,66 @@ option:disabled {
     color: #fff !important;
     border: 2px solid transparent !important;
 }
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background */
+    z-index: 1000;
+    /* Ensure it's on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    width: 85vw;
+    background: #001C30;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.5rem;
+
+}
+
+#overlay-msg {
+    color: #298fbc;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.invisible {
+    display: none;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #298fbc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
