@@ -41,7 +41,27 @@ function changeScope(newScope) {
   }
 }
 
+function showConfirmation() {
+  document.getElementById("overlay-msg").innerHTML = "Thanks for reaching out! Your response has been received successfully. Our team will contact you soon to discuss your ward's learning needs.";
+  document.getElementById("overlay-spinner").style.display = 'none';
+  setTimeout(() => {
+    document.getElementById("overlay-cnfrm-div").classList.remove("overlay");
+    document.getElementById("overlay-cnfrm-div").classList.add("invisible");
+    document.getElementById("overlay-msg").innerHTML = "We’re recording your request, hang tight...";
+    document.getElementById("overlay-spinner").style.display = 'block';
+  }, 4000);
+}
+
+function removeConfirmationOverlay() {
+  document.getElementById("overlay-cnfrm-div").classList.remove("overlay");
+  document.getElementById("overlay-cnfrm-div").classList.add("invisible");
+}
+
 function invokeEmail() {
+
+  // Show Overlay
+  document.getElementById("overlay-cnfrm-div").classList.remove("invisible");
+  document.getElementById("overlay-cnfrm-div").classList.add("overlay");
 
   var chosenSubjects = getSubjects();
   var mode = (document.getElementById("online-mode").checked) ? "Online" : "Offline/Home Tution";
@@ -81,15 +101,17 @@ function invokeEmail() {
       })
         .then(response => {
           console.log('Record added successfully!', response.status, response.text);
-          alert("Your response has been received successfully. Our team will contact you soon to discuss your ward's learning needs.");
+          showConfirmation();
         })
         .catch(err => {
           console.error("Error:", err);
-          alert("An error occurred while submitting the form.");
+          removeConfirmationOverlay();
+          alert("An error occurred while submitting the form. Please try again after some time!");
         });
     },
     (error) => {
       console.log('FAILED...', error);
+      removeConfirmationOverlay();
       alert("Some error occured. Please try again!");
     },
   );
